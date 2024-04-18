@@ -14,22 +14,12 @@ struct DailyTask: Identifiable {
     var todos: [Todo]
 }
 
-extension DailyTask {
-    static let dummy: DailyTask = DailyTask(date: Date(), schedules: Schedule.dummy3, todos: Todo.dummy2)
-}
-
-struct Schedule {
+struct Schedule: Identifiable, Hashable {
+    let id = UUID()
     var title: String
     var startTime: Date
     var finishTime: Date?
     var place: String
-}
-
-extension Schedule {
-    static let dummy3: [Schedule] = [
-        Schedule(title: "이오의 이오이오", startTime: Date(), finishTime: Date(), place: "도서관 GSR-I"),
-        Schedule(title: "피콜로 스터디", startTime: Date(), finishTime: Date(), place: "Collab 3"),
-        Schedule(title: "구떠리 회의", startTime: Date(), finishTime: Date(), place: "비대면")]
 }
 
 struct Todo: Identifiable {
@@ -39,6 +29,35 @@ struct Todo: Identifiable {
     var date: Date
     var color: Color
     var subTodos: [SubTodo]
+}
+
+struct SubTodo: Identifiable {
+    let id = UUID()
+    var title: String
+    var isAchieved: Bool
+}
+
+// 더미 데이터
+extension DailyTask {
+    static let dummy: DailyTask = DailyTask(date: Date(), schedules: Schedule.dummy4, todos: Todo.dummy2)
+}
+
+extension Schedule {
+    static let dummy0: [Schedule] = [
+        Schedule(title: "아카데미", startTime: "2024.04.14 14:00".changeToDateWithTime(), finishTime: "2024.04.14 18:13".changeToDateWithTime(), place: "Collab 3"),
+        Schedule(title: "구떠리 회의", startTime: "2024.04.14 21:30".changeToDateWithTime(), finishTime: "2024.04.14 23:00".changeToDateWithTime(), place: "비대면")]
+    
+    static let dummy3: [Schedule] = [
+        Schedule(title: "아카데미", startTime: "2024.04.17 14:00".changeToDateWithTime(), finishTime: "2024.04.15 18:13".changeToDateWithTime(), place: "Collab 3")]
+    
+    static let dummy4: [Schedule] = [
+        Schedule(title: "이오의 이오이오", startTime: "2024.04.16 09:00".changeToDateWithTime(), finishTime: nil, place: "도서관 GSR-I"),
+        Schedule(title: "아카데미", startTime: "2024.04.18 14:00".changeToDateWithTime(), finishTime: "2024.04.18 18:13".changeToDateWithTime(), place: "Collab 3"),
+        Schedule(title: "구떠리 회의", startTime: "2024.04.16 21:30".changeToDateWithTime(), finishTime: "2024.04.16 23:00".changeToDateWithTime(), place: "비대면")]
+    
+    static let dummy5: [Schedule] = [
+        Schedule(title: "아카데미", startTime: "2024.04.17 14:00".changeToDateWithTime(), finishTime: "2024.04.17 18:13".changeToDateWithTime(), place: "Collab 3"),
+        Schedule(title: "구떠리 회의", startTime: "2024.04.17 21:30".changeToDateWithTime(), finishTime: "2024.04.17 23:00".changeToDateWithTime(), place: "비대면")]
 }
 
 extension Todo {
@@ -51,19 +70,3 @@ extension Todo {
             SubTodo(title: "필요한 기능 공부하기", isAchieved: false),
             SubTodo(title: "MusicKit 알아보기", isAchieved: false)])]
 }
-
-struct SubTodo: Identifiable {
-    let id = UUID()
-    var title: String
-    var isAchieved: Bool
-}
-
-/*
- // 입력된 문자열 형식을 나타내는 DateFormatter를 생성합니다.
- let dateFormatter = DateFormatter()
- dateFormatter.dateFormat = "yyyy.MM.dd"
-
- // 문자열을 Date로 변환합니다.
- if let date = dateFormatter.date(from: "2024.04.12") {
-     print("변환된 날짜: \(date)")
- */

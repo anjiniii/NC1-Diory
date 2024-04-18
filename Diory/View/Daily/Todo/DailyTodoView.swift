@@ -31,13 +31,15 @@ struct DailyTodoView: View {
                         
                         // sub todo
                         ForEach(0 ..< todos[index].subTodos.count, id: \.self) { subTodoIndex in
-                            var subTodo = todos[index].subTodos[subTodoIndex]
+                            let todo = todos[index]
+                            let subTodo = todo.subTodos[subTodoIndex]
+                            
                             HStack(spacing: 0) {
                                 Spacer()
                                     .frame(width: 28)
                                 
                                 TodoRow(title: subTodo.title,
-                                        color: todos[index].color,
+                                        color: todo.color,
                                         isAchieved: $todos[index].subTodos[subTodoIndex].isAchieved)
                                 
                                 Spacer(minLength: 0)
@@ -68,7 +70,10 @@ struct DailyTodoView: View {
                     Text("추가")
                 }
                 .sheet(isPresented: $showAddTodoSheet) {
-                    
+                    AddTodoView { todo in
+                        todos.append(todo)
+                        showAddTodoSheet = false
+                    }
                 }
                 
                 Button {
