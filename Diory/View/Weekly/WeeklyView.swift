@@ -31,7 +31,12 @@ struct WeeklyView: View {
                         .listRowBackground(isToday(date) ? Color.indigo.opacity(0.2) : Color.white)
                 }
             }
+            
+            Spacer()
+                .frame(height: 20)
+                .listRowBackground(Color.clear)
         }
+        .ignoresSafeArea(edges: .bottom)
         .navigationTitle("이오의 주간 일정")
         .navigationBarTitleDisplayMode(.automatic)
     }
@@ -67,7 +72,7 @@ struct WeeklyView: View {
 }
 
 #Preview {
-    WeeklyView()
+    DioryMainView()
 }
 
 struct DummyData {

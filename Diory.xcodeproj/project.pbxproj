@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		511F0CDB2BDB2DEF00EC2AD7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511F0CDA2BDB2DEF00EC2AD7 /* TestView.swift */; };
+		511F3F202D15B32F000B5E32 /* DioryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511F3F1F2D15B32F000B5E32 /* DioryMainView.swift */; };
+		511F3F222D15B34C000B5E32 /* TabIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511F3F212D15B34C000B5E32 /* TabIndex.swift */; };
 		514949DA2BCBD2A50052E30D /* DioryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514949D92BCBD2A50052E30D /* DioryApp.swift */; };
 		514949DE2BCBD2A70052E30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514949DD2BCBD2A70052E30D /* Assets.xcassets */; };
 		514949E12BCBD2A70052E30D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514949E02BCBD2A70052E30D /* Preview Assets.xcassets */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		511F0CDA2BDB2DEF00EC2AD7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		511F3F1F2D15B32F000B5E32 /* DioryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DioryMainView.swift; sourceTree = "<group>"; };
+		511F3F212D15B34C000B5E32 /* TabIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIndex.swift; sourceTree = "<group>"; };
 		514949D62BCBD2A50052E30D /* Diory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514949D92BCBD2A50052E30D /* DioryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DioryApp.swift; sourceTree = "<group>"; };
 		514949DD2BCBD2A70052E30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		511F3F1E2D15B30E000B5E32 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				511F3F1F2D15B32F000B5E32 /* DioryMainView.swift */,
+				511F3F212D15B34C000B5E32 /* TabIndex.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		514949CD2BCBD2A50052E30D = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,7 @@
 		51E3715F2BCD6DD500BBB723 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				511F3F1E2D15B30E000B5E32 /* Main */,
 				51E371622BCD6DF900BBB723 /* Weekly */,
 				51E371602BCD6DDC00BBB723 /* Daily */,
 			);
@@ -276,6 +290,8 @@
 				51AC10372BCE586A00FFFE4E /* ColorExtension.swift in Sources */,
 				51C17DA02BD0FCB400690267 /* DioryTabView.swift in Sources */,
 				51D55CF12BCBF1A10099C96F /* DailyView.swift in Sources */,
+				511F3F202D15B32F000B5E32 /* DioryMainView.swift in Sources */,
+				511F3F222D15B34C000B5E32 /* TabIndex.swift in Sources */,
 				51AC103D2BCE5C2300FFFE4E /* AddScheduleView.swift in Sources */,
 				51AC10392BCE589200FFFE4E /* StringToDate.swift in Sources */,
 				51AC103B2BCE58F900FFFE4E /* DailyScheduleRow.swift in Sources */,

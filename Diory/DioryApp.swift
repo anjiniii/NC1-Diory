@@ -11,8 +11,12 @@ import SwiftUI
 struct DioryApp: App {
     var body: some Scene {
         WindowGroup {
-            DioryTabView()
+            DioryMainView()
         }
 //        .modelContainer(for: [DailyTask.self])
     }
+}
+
+#Preview {
+    DioryMainView()
 }
