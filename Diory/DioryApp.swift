@@ -13,5 +13,6 @@ struct DioryApp: App {
         WindowGroup {
             DioryTabView()
         }
+//        .modelContainer(for: [DailyTask.self])
     }
 }

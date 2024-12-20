@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DailyTodoView: View {
+    @Environment(\.modelContext) private var modelContext
     @State var todos: [Todo] = []
-    
     @State private var showAddTodoSheet: Bool = false
     
     var body: some View {
@@ -64,15 +64,13 @@ struct DailyTodoView: View {
                 Spacer()
                 
                 Button {
-//                    todos.append(Todo.dummy2[0])
                     showAddTodoSheet = true
                 } label: {
                     Text("추가")
                 }
                 .sheet(isPresented: $showAddTodoSheet) {
                     AddTodoView { todo in
-                        todos.append(todo)
-                        showAddTodoSheet = false
+                        addTodo(todo)
                     }
                 }
                 
@@ -85,6 +83,11 @@ struct DailyTodoView: View {
             
             Divider()
         }
+    }
+    
+    private func addTodo(_ todo: Todo) {
+        todos.append(todo)
+        showAddTodoSheet = false
     }
 }
 
