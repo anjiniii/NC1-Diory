@@ -10,7 +10,7 @@ import SwiftUI
 extension String {
     func changeToDateWithTime() -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
+        dateFormatter.dateFormat = "yyyy. MM. dd HH:mm"
         
         if let date = dateFormatter.date(from: self) {
             return date

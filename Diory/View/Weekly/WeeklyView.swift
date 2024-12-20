@@ -37,7 +37,7 @@ struct WeeklyView: View {
                 .listRowBackground(Color.clear)
         }
         .ignoresSafeArea(edges: .bottom)
-        .navigationTitle("이오의 주간 일정")
+        .navigationTitle("주간 일정")
         .navigationBarTitleDisplayMode(.automatic)
     }
     
@@ -77,25 +77,25 @@ struct WeeklyView: View {
 
 struct DummyData {
     static let allDummyDate: [Date: DailyTask] = [
-        "2024.04.15".changeToDate(): DailyTask(date: "2024.04.15".changeToDate(), schedules: Schedule.dummy15, todos: Todo.dummy2),
-        "2024.04.16".changeToDate(): DailyTask(date: "2024.04.16".changeToDate(), schedules: Schedule.dummy16, todos: Todo.dummy2),
-        "2024.04.17".changeToDate(): DailyTask(date: "2024.04.17".changeToDate(), schedules: Schedule.dummy17, todos: Todo.dummy2),
-        "2024.04.18".changeToDate(): DailyTask(date: "2024.04.18".changeToDate(), schedules: Schedule.dummy18, todos: Todo.dummy2),
-        "2024.04.19".changeToDate(): DailyTask(date: "2024.04.19".changeToDate(), schedules: Schedule.dummy19, todos: Todo.dummy2),
-        "2024.04.20".changeToDate(): DailyTask(date: "2024.04.20".changeToDate(), schedules: Schedule.dummy20, todos: Todo.dummy2),
-        "2024.04.21".changeToDate(): DailyTask(date: "2024.04.21".changeToDate(), schedules: Schedule.dummy21, todos: Todo.dummy2),
-        "2024.04.22".changeToDate(): DailyTask(date: "2024.04.22".changeToDate(), schedules: Schedule.dummy22, todos: Todo.dummy2),
-        "2024.04.23".changeToDate(): DailyTask(date: "2024.04.23".changeToDate(), schedules: Schedule.dummy23, todos: Todo.dummy2),
-        "2024.04.24".changeToDate(): DailyTask(date: "2024.04.24".changeToDate(), schedules: Schedule.dummy24, todos: Todo.dummy2),
-        "2024.04.25".changeToDate(): DailyTask(date: "2024.04.25".changeToDate(), schedules: Schedule.dummy25, todos: Todo.dummy2),
-        "2024.04.26".changeToDate(): DailyTask(date: "2024.04.26".changeToDate(), schedules: Schedule.dummy26, todos: Todo.dummy2),
-        "2024.04.27".changeToDate(): DailyTask(date: "2024.04.27".changeToDate(), schedules: Schedule.dummy27, todos: Todo.dummy2),
-        "2024.04.28".changeToDate(): DailyTask(date: "2024.04.28".changeToDate(), schedules: Schedule.dummy28, todos: Todo.dummy2),
-        "2024.04.29".changeToDate(): DailyTask(date: "2024.04.29".changeToDate(), schedules: Schedule.dummy4, todos: Todo.dummy2),
-        "2024.04.30".changeToDate(): DailyTask(date: "2024.04.30".changeToDate(), schedules: Schedule.dummy3, todos: Todo.dummy2),
+        "2024.12.15".changeToDate(): DailyTask(date: "2024.12.15".changeToDate(), schedules: Schedule.dummy15, todos: Todo.dummy2),
+        "2024.12.16".changeToDate(): DailyTask(date: "2024.12.16".changeToDate(), schedules: Schedule.dummy16, todos: Todo.dummy2),
+        "2024.12.17".changeToDate(): DailyTask(date: "2024.12.17".changeToDate(), schedules: Schedule.dummy17, todos: Todo.dummy2),
+        "2024.12.18".changeToDate(): DailyTask(date: "2024.12.18".changeToDate(), schedules: Schedule.dummy18, todos: Todo.dummy2),
+        "2024.12.19".changeToDate(): DailyTask(date: "2024.12.19".changeToDate(), schedules: Schedule.dummy19, todos: Todo.dummy2),
+        "2024.12.20".changeToDate(): DailyTask(date: "2024.12.20".changeToDate(), schedules: Schedule.dummy20, todos: Todo.dummy2),
+        "2024.12.21".changeToDate(): DailyTask(date: "2024.12.21".changeToDate(), schedules: Schedule.dummy21, todos: Todo.dummy2),
+        "2024.12.22".changeToDate(): DailyTask(date: "2024.12.22".changeToDate(), schedules: Schedule.dummy22, todos: Todo.dummy2),
+        "2024.12.23".changeToDate(): DailyTask(date: "2024.12.23".changeToDate(), schedules: Schedule.dummy23, todos: Todo.dummy2),
+        "2024.12.24".changeToDate(): DailyTask(date: "2024.12.24".changeToDate(), schedules: Schedule.dummy24, todos: Todo.dummy2),
+        "2024.12.25".changeToDate(): DailyTask(date: "2024.12.25".changeToDate(), schedules: Schedule.dummy25, todos: Todo.dummy2),
+        "2024.12.26".changeToDate(): DailyTask(date: "2024.12.26".changeToDate(), schedules: Schedule.dummy26, todos: Todo.dummy2),
+        "2024.12.27".changeToDate(): DailyTask(date: "2024.12.27".changeToDate(), schedules: Schedule.dummy27, todos: Todo.dummy2),
+        "2024.12.28".changeToDate(): DailyTask(date: "2024.12.28".changeToDate(), schedules: Schedule.dummy28, todos: Todo.dummy2),
+        "2024.12.29".changeToDate(): DailyTask(date: "2024.12.29".changeToDate(), schedules: Schedule.dummy4, todos: Todo.dummy2),
+        "2024.12.30".changeToDate(): DailyTask(date: "2024.12.30".changeToDate(), schedules: Schedule.dummy3, todos: Todo.dummy2),
+        "2024.12.31".changeToDate(): DailyTask(date: "2024.12.31".changeToDate(), schedules: Schedule.dummy3, todos: Todo.dummy2),
         "2024.05.01".changeToDate(): DailyTask(date: "2024.05.01".changeToDate(), schedules: Schedule.dummy4, todos: Todo.dummy2),
-        "2024.05.02".changeToDate(): DailyTask(date: "2024.05.02".changeToDate(), schedules: Schedule.dummy3, todos: Todo.dummy2),
-        "2024.05.03".changeToDate(): DailyTask(date: "2024.04.14".changeToDate(), schedules: Schedule.dummy0, todos: Todo.dummy2)
+        "2024.05.02".changeToDate(): DailyTask(date: "2024.05.02".changeToDate(), schedules: Schedule.dummy3, todos: Todo.dummy2)
     ]
     
     func getDateComponents(year: Int, month: Int, day: Int) -> DateComponents {

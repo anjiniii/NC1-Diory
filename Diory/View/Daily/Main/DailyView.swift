@@ -66,7 +66,7 @@ struct DailyView: View {
     }
     
     private func navigationTitleString() -> String {
-        "\(selectedDate.year).\(selectedDate.month).\(selectedDate.day).\(selectedDate.weekday)"
+        "\(selectedDate.year). \(selectedDate.month). \(selectedDate.day). \(selectedDate.weekday)"
     }
 }
 
@@ -112,5 +112,5 @@ extension Date {
 }
 
 #Preview {
-    DailyView()
+    DioryMainView()
 }
